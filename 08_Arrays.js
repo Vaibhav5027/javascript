@@ -19,3 +19,24 @@ console.log(array);
 
 /* difference between slice and splice is the slice will not manipulate the original array but
  splice operaion chenge the original array */
+
+const marvel_heros = ["IronMan", "Hulk", "Spiderman"]
+const Dc_Heros = ["Superman", "Batman", "Flash"]
+ 
+console.log(marvel_heros.push(Dc_Heros));//it will add the  dc heros at index 4 as a single element
+//it will give count after this if we print then we will get length
+console.log(marvel_heros);
+console.log(marvel_heros.concat(Dc_Heros)); //it will add the element of DC heros at the end of maverheros
+
+const mixed_array = [1, 2, [3, 4, [5, 6]]] 
+// if you have array which content more array as element if yoy want to convert to one degree array then you can
+// use flat operator
+// console.log(mixed_array.flat(2));
+
+// spread operrator(...) user to 
+console.log([1, 2,...[3, 4,...[5, 6]]]  );
+
+
+const type = [1, 2, ...[3, 4, ...[5, 6]]];
+console.log(typeof mixed_array);
+
