@@ -38,5 +38,11 @@ console.log([1, 2,...[3, 4,...[5, 6]]]  );
 
 
 const type = [1, 2, ...[3, 4, ...[5, 6]]];
-console.log(typeof mixed_array);
+console.log(typeof array);
+
+console.log(Array.from("vaibhav")); //it will take only one argument as input and return arrray of that 
+
+console.log(Array.of(100, 200, "vaibhav"));
+
+
 
