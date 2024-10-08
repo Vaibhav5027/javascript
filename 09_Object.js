@@ -27,6 +27,8 @@ JsUser.greeting = function () {
 JsUser.email;
 JsUser["name"];
 console.log(JsUser.greeting());
+console.log(JsUser["name"]);
+
 
 const obj1 = {
     1: "a",
@@ -52,3 +54,16 @@ Object.entries(obj1);
 console.log(Object.entries(obj1));  //result [ [ '1', 'a' ], [ '2', 'b' ] ]
 console.log(obj1.hasOwnProperty(1));  //if object contains key then return true ya false
 
+
+// Object Destructuring
+const course = {
+    courseName: "Java Fullstack",
+    price: 999,
+    courseInstructor:"Vaibhav"
+}
+
+const { courseName } = course;
+console.log(courseName)
+// we can rename also 
+const { courseName: name } = course;
+console.log(name);
