@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>relations</title>
+  </head>
+  <body>
+    <div class="parent" style="background-color: #212121; color: #fff">
+      <div class="day"><h3>Monday</h3></div>
+      <div class="day">Thuesday</div>
+      <div class="day">Wensday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent);
+    //console.log(parent.children); //it will give you all the children
+    // console.log((parent.children[0].style.color = "red")); // we can add style like this
+    // also we can use loops over it
+    // for (let index = 0; index < parent.children.length; index++) {
+    //   const element = parent.children[index].innerHTML;
+    //   console.log(element);
+    // }
+
+    const dayOne = document.querySelector(".day");
+    // console.log(dayOne.innerHTML);
+    // console.log(dayOne.innerText);
+    // console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling.innerHTML); //it will give next element
+
+    console.log(parent.childNodes); //it will give all nodes. in this line break is consider as node
+  </script>
+</html>

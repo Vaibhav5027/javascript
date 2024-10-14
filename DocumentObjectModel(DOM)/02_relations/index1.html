@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cretaing element</title>
+  </head>
+  <body></body>
+  <script>
+    const div = document.createElement("div");
+    div.className = "main";
+    div.id = "myId";
+    div.setAttribute("title", "chai pe charcha");
+    div.style.backgroundColor = "red";
+    div.innerHTML = "hi , how are you?"; // it will first get the inner html value after that it will replace with new value
+    const textNode = document.createTextNode("chai with code"); //second approach
+    div.appendChild(textNode);
+    document.body.appendChild(div);
+    console.log(div);
+  </script>
+</html>

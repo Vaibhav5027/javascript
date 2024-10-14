@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="courses">
+      <li>JavaScript</li>
+    </div>
+  </body>
+  <script>
+    //first approach
+    function addLang(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = langName;
+      document.querySelector(".courses").appendChild(li);
+    }
+    addLang("Java");
+
+    // secondApproach
+    function addOptLang(langname) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(`${langname}`));
+      document.querySelector(".courses").appendChild(li);
+      document.body.appendChild(li);
+    }
+    addOptLang("python");
+    //Replace|| EDIT
+    function edit(langName) {
+      const firstchlid = document.querySelector("li:nth-child(0)");
+      firstchlid.innerHTML = langName;
+    }
+    edit("type");
+    function edit(langName) {
+      const firstchlid = document.querySelector("li:first-child");
+      firstchlid.outerHTML = `<li>${langName}</li>`;
+    }
+    edit("java");
+    edit("type");
+    // function remove(langName) {
+    const firstchlid = document.querySelector("li:first-child");
+    firstchlid.remove();
+    // }
+  </script>
+</html>
