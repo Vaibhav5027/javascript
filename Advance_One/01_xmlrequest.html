@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+  </head>
+  <body>
+    <div>
+      <div class="image-container">
+        <img src="your-image.jpg" alt="Image description" id="image" />
+        <p id="name">Your Name</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    let request = "https://api.github.com/users/hiteshchoudhary";
+    let image = document.getElementById("image");
+    let name = document.getElementById("name");
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", request);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        let userData = JSON.parse(xhr.responseText);
+        image.src = userData.avatar_url;
+        name.textContent = userData.login;
+        console.log("User Data:", userData);
+      } else {
+        console.error("Error:", xhr.statusText);
+      }
+    };
+    xhr.send();
+  </script>
+</html>
